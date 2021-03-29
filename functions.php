@@ -2,9 +2,7 @@ function get_breadcrumb() {
 
 	global $post;
 
-	$trail = '
-
-';
+	$trail = '';
 	$page_title = get_the_title($post->ID);
 
 	if($post->post_parent) {
@@ -21,9 +19,7 @@ function get_breadcrumb() {
 	}
 
 	$trail .= $page_title;
-	$trail .= '
-
-';
+	$trail .= '';
 
 	return $trail;	
 
